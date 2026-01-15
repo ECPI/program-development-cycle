@@ -64,6 +64,104 @@
                 <h2 id="cycle-title">The Development Cycle at a Glance</h2>
                 <p class="section-intro">Most software projects follow the same core loop. You will repeat these steps constantly throughout your career — sometimes in minutes, sometimes over months.</p>
 
+                <!-- Circular Lifecycle Diagram -->
+                <div class="cycle-diagram-container" role="region" aria-labelledby="cycle-diagram-label">
+                    <h3 id="cycle-diagram-label" class="sr-only">Interactive Circular Development Cycle Diagram</h3>
+                    <svg class="lifecycle-circle" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="The seven-step development cycle shown as a continuous circle">
+                        <!-- Background circle -->
+                        <circle cx="200" cy="200" r="180" fill="none" stroke="#e0e0e0" stroke-width="2"/>
+                        
+                        <!-- Center text -->
+                        <g aria-label="Continuous cycle indicator">
+                            <text x="200" y="195" text-anchor="middle" class="cycle-center-text" dominant-baseline="middle">
+                                <tspan class="cycle-label">The Cycle</tspan>
+                            </text>
+                            <text x="200" y="215" text-anchor="middle" class="cycle-center-subtext" dominant-baseline="middle">
+                                <tspan>Never Ends</tspan>
+                            </text>
+                            <text x="200" y="230" text-anchor="middle" class="cycle-center-subtext" dominant-baseline="middle">
+                                <tspan>Always Evolves</tspan>
+                            </text>
+                        </g>
+
+                        <!-- Step 1: Understand the Problem -->
+                        <g class="lifecycle-step" data-step="1" role="button" tabindex="0" aria-label="Step 1: Understand the Problem" aria-expanded="false">
+                            <circle cx="200" cy="50" r="32" class="step-circle" fill="#4CAF50"/>
+                            <text x="200" y="52" text-anchor="middle" class="step-number" fill="white">1</text>
+                            <text x="200" y="100" text-anchor="middle" class="step-label" fill="#333">Understand</text>
+                            <text x="200" y="115" text-anchor="middle" class="step-label" fill="#333">Problem</text>
+                        </g>
+
+                        <!-- Step 2: Plan the Logic -->
+                        <g class="lifecycle-step" data-step="2" role="button" tabindex="0" aria-label="Step 2: Plan the Logic" aria-expanded="false">
+                            <circle cx="325" cy="82" r="32" class="step-circle" fill="#2196F3"/>
+                            <text x="325" y="84" text-anchor="middle" class="step-number" fill="white">2</text>
+                            <text x="355" y="130" text-anchor="start" class="step-label" fill="#333">Plan</text>
+                            <text x="355" y="145" text-anchor="start" class="step-label" fill="#333">Logic</text>
+                        </g>
+
+                        <!-- Step 3: Code the Program -->
+                        <g class="lifecycle-step" data-step="3" role="button" tabindex="0" aria-label="Step 3: Code the Program" aria-expanded="false">
+                            <circle cx="350" cy="200" r="32" class="step-circle" fill="#FF9800"/>
+                            <text x="350" y="202" text-anchor="middle" class="step-number" fill="white">3</text>
+                            <text x="385" y="200" text-anchor="start" class="step-label" fill="#333">Code</text>
+                            <text x="385" y="215" text-anchor="start" class="step-label" fill="#333">Program</text>
+                        </g>
+
+                        <!-- Step 4: Translate to Machine Code -->
+                        <g class="lifecycle-step" data-step="4" role="button" tabindex="0" aria-label="Step 4: Translate to Machine Code" aria-expanded="false">
+                            <circle cx="325" cy="318" r="32" class="step-circle" fill="#9C27B0"/>
+                            <text x="325" y="320" text-anchor="middle" class="step-number" fill="white">4</text>
+                            <text x="355" y="365" text-anchor="start" class="step-label" fill="#333">Translate</text>
+                            <text x="355" y="380" text-anchor="start" class="step-label" fill="#333">Machine</text>
+                        </g>
+
+                        <!-- Step 5: Test the Program -->
+                        <g class="lifecycle-step" data-step="5" role="button" tabindex="0" aria-label="Step 5: Test the Program" aria-expanded="false">
+                            <circle cx="200" cy="350" r="32" class="step-circle" fill="#E91E63"/>
+                            <text x="200" y="352" text-anchor="middle" class="step-number" fill="white">5</text>
+                            <text x="200" y="400" text-anchor="middle" class="step-label" fill="#333">Test</text>
+                            <text x="200" y="415" text-anchor="middle" class="step-label" fill="#333">Program</text>
+                        </g>
+
+                        <!-- Step 6: Release the Program -->
+                        <g class="lifecycle-step" data-step="6" role="button" tabindex="0" aria-label="Step 6: Release the Program" aria-expanded="false">
+                            <circle cx="75" cy="318" r="32" class="step-circle" fill="#00BCD4"/>
+                            <text x="75" y="320" text-anchor="middle" class="step-number" fill="white">6</text>
+                            <text x="45" y="365" text-anchor="end" class="step-label" fill="#333">Release</text>
+                            <text x="45" y="380" text-anchor="end" class="step-label" fill="#333">Program</text>
+                        </g>
+
+                        <!-- Step 7: Maintain & Improve -->
+                        <g class="lifecycle-step" data-step="7" role="button" tabindex="0" aria-label="Step 7: Maintain and Improve" aria-expanded="false">
+                            <circle cx="75" cy="82" r="32" class="step-circle" fill="#FF5722"/>
+                            <text x="75" y="84" text-anchor="middle" class="step-number" fill="white">7</text>
+                            <text x="45" y="130" text-anchor="end" class="step-label" fill="#333">Maintain &amp;</text>
+                            <text x="45" y="145" text-anchor="end" class="step-label" fill="#333">Improve</text>
+                        </g>
+
+                        <!-- Arrows showing the circular flow -->
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                <polygon points="0 0, 10 3, 0 6" fill="#999"/>
+                            </marker>
+                            <marker id="arrowhead-hover" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                <polygon points="0 0, 10 3, 0 6" fill="#0066cc"/>
+                            </marker>
+                        </defs>
+                        
+                        <!-- Circular arrows -->
+                        <path d="M 200 82 A 118 118 0 0 1 318 102" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
+                        <path d="M 318 102 A 118 118 0 0 1 350 200" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
+                        <path d="M 350 200 A 118 118 0 0 1 318 298" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
+                        <path d="M 318 298 A 118 118 0 0 1 200 318" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
+                        <path d="M 200 318 A 118 118 0 0 1 82 298" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
+                        <path d="M 82 298 A 118 118 0 0 1 82 102" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
+                        <path d="M 82 102 A 118 118 0 0 1 200 82" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
+                    </svg>
+                    <p class="diagram-note">Click any step to learn more • All steps are interconnected and repeat</p>
+                </div>
+
                 <!-- Interactive Cycle -->
                 <div class="cycle-container" role="region" aria-labelledby="cycle-title">
                     <div class="cycle-grid">

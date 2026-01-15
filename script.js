@@ -1,4 +1,74 @@
 // ===========================
+// LIFECYCLE CIRCULAR DIAGRAM
+// ===========================
+
+const lifecycleSteps = document.querySelectorAll('.lifecycle-step');
+
+lifecycleSteps.forEach(step => {
+    const stepButton = step;
+    const stepNumber = step.getAttribute('data-step');
+    
+    // Click handler
+    stepButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        handleLifecycleStepClick(stepNumber);
+    });
+
+    // Keyboard navigation
+    stepButton.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleLifecycleStepClick(stepNumber);
+        }
+    });
+
+    // Mouse enter/leave for visual feedback
+    stepButton.addEventListener('mouseenter', function() {
+        highlightFlowToStep(stepNumber);
+    });
+
+    stepButton.addEventListener('mouseleave', function() {
+        clearFlowHighlight();
+    });
+});
+
+function handleLifecycleStepClick(stepNumber) {
+    // Find the corresponding cycle step card and click it
+    const cycleStep = document.querySelector(`.cycle-step[data-step="${stepNumber}"]`);
+    if (cycleStep) {
+        const button = cycleStep.querySelector('.step-button');
+        if (button) {
+            button.click();
+            // Scroll to the card
+            setTimeout(() => {
+                button.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+    }
+
+    // Update aria-expanded
+    const lifecycleStep = document.querySelector(`.lifecycle-step[data-step="${stepNumber}"]`);
+    if (lifecycleStep) {
+        const isExpanded = lifecycleStep.getAttribute('aria-expanded') === 'true';
+        lifecycleStep.setAttribute('aria-expanded', !isExpanded);
+    }
+}
+
+function highlightFlowToStep(stepNumber) {
+    // Optional: Add visual highlighting of the flow
+    const lifecycleStep = document.querySelector(`.lifecycle-step[data-step="${stepNumber}"]`);
+    if (lifecycleStep) {
+        lifecycleStep.style.filter = 'brightness(1.15)';
+    }
+}
+
+function clearFlowHighlight() {
+    lifecycleSteps.forEach(step => {
+        step.style.filter = '';
+    });
+}
+
+// ===========================
 // MOBILE MENU TOGGLE
 // ===========================
 
