@@ -3,6 +3,18 @@
 // ===========================
 
 const lifecycleSteps = document.querySelectorAll('.lifecycle-step');
+const navbarEl = document.querySelector('.navbar');
+
+function getHeaderOffset() {
+    return ((navbarEl && navbarEl.offsetHeight) ? navbarEl.offsetHeight : 0) + 12;
+}
+
+function scrollToElement(el) {
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const top = window.scrollY + rect.top - getHeaderOffset();
+    window.scrollTo({ top, behavior: 'smooth' });
+}
 
 lifecycleSteps.forEach(step => {
     const stepButton = step;
@@ -41,8 +53,8 @@ function handleLifecycleStepClick(stepNumber) {
             button.click();
             // Scroll to the card
             setTimeout(() => {
-                button.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 100);
+                scrollToElement(cycleStep);
+            }, 120);
         }
     }
 
@@ -129,8 +141,8 @@ cycleSteps.forEach(step => {
             // Scroll into view if opening
             if (!isExpanded) {
                 setTimeout(() => {
-                    button.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
+                    scrollToElement(step);
+                }, 120);
             }
         });
 

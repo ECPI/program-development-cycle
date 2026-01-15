@@ -322,6 +322,7 @@ a:focus-visible {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    scroll-margin-top: 80px; /* anchor back to diagram respects header */
 }
 
 .lifecycle-circle {
@@ -441,6 +442,7 @@ a:focus-visible {
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
+    scroll-margin-top: 80px; /* ensure title remains visible under sticky header */
 }
 
 .cycle-step:hover {
@@ -495,6 +497,21 @@ a:focus-visible {
     padding: 1.5rem;
     border-top: 2px solid #e0e0e0;
     background-color: #fff;
+}
+.back-to-diagram {
+    text-align: right;
+    margin-top: 0.75rem;
+}
+
+.back-to-diagram .back-link {
+    color: #0066cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-to-diagram .back-link:hover,
+.back-to-diagram .back-link:focus {
+    text-decoration: underline;
 }
 
 .step-content[hidden] {

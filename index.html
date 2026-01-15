@@ -65,98 +65,62 @@
                 <p class="section-intro">Most software projects follow the same core loop. You will repeat these steps constantly throughout your career — sometimes in minutes, sometimes over months.</p>
 
                 <!-- Circular Lifecycle Diagram -->
-                <div class="cycle-diagram-container" role="region" aria-labelledby="cycle-diagram-label">
+                <div id="cycle-diagram" class="cycle-diagram-container" role="region" aria-labelledby="cycle-diagram-label">
                     <h3 id="cycle-diagram-label" class="sr-only">Interactive Circular Development Cycle Diagram</h3>
-                    <svg class="lifecycle-circle" viewBox="-20 -20 540 540" xmlns="http://www.w3.org/2000/svg" aria-label="The seven-step development cycle shown as a continuous circle">
-                        <!-- Background circle -->
+                    <svg class="lifecycle-circle" viewBox="-60 -60 620 620" xmlns="http://www.w3.org/2000/svg" aria-label="The seven-step development cycle shown as a continuous circle">
+                        <!-- Background circle (outer grey ring) -->
                         <circle cx="250" cy="250" r="180" fill="none" stroke="#e0e0e0" stroke-width="2"/>
-                        
-                        <!-- Center text -->
-                        <g aria-label="Continuous cycle indicator">
-                            <text x="250" y="245" text-anchor="middle" class="cycle-center-text" dominant-baseline="middle">
-                                <tspan class="cycle-label">The Cycle</tspan>
-                            </text>
-                            <text x="250" y="270" text-anchor="middle" class="cycle-center-subtext" dominant-baseline="middle">
-                                <tspan>Never Ends</tspan>
-                            </text>
-                            <text x="250" y="290" text-anchor="middle" class="cycle-center-subtext" dominant-baseline="middle">
-                                <tspan>Always Evolves</tspan>
-                            </text>
-                        </g>
 
                         <!-- Step 1: Understand the Problem -->
                         <g class="lifecycle-step" data-step="1" role="button" tabindex="0" aria-label="Step 1: Understand the Problem" aria-expanded="false">
                             <circle cx="250" cy="70" r="40" class="step-circle" fill="#4CAF50"/>
                             <text x="250" y="74" text-anchor="middle" class="step-number" fill="white">1</text>
                             <text x="250" y="135" text-anchor="middle" class="step-label" fill="#333">Understand</text>
-                            <text x="250" y="152" text-anchor="middle" class="step-label" fill="#333">Problem</text>
                         </g>
 
                         <!-- Step 2: Plan the Logic -->
                         <g class="lifecycle-step" data-step="2" role="button" tabindex="0" aria-label="Step 2: Plan the Logic" aria-expanded="false">
-                            <circle cx="406" cy="104" r="40" class="step-circle" fill="#2196F3"/>
-                            <text x="406" y="108" text-anchor="middle" class="step-number" fill="white">2</text>
-                            <text x="444" y="162" text-anchor="start" class="step-label" fill="#333">Plan</text>
-                            <text x="444" y="179" text-anchor="start" class="step-label" fill="#333">Logic</text>
+                            <circle cx="391" cy="138" r="40" class="step-circle" fill="#2196F3"/>
+                            <text x="391" y="142" text-anchor="middle" class="step-number" fill="white">2</text>
+                            <text x="426" y="162" text-anchor="start" class="step-label" fill="#333">Plan</text>
                         </g>
 
                         <!-- Step 3: Code the Program -->
                         <g class="lifecycle-step" data-step="3" role="button" tabindex="0" aria-label="Step 3: Code the Program" aria-expanded="false">
-                            <circle cx="430" cy="250" r="40" class="step-circle" fill="#FF9800"/>
-                            <text x="430" y="254" text-anchor="middle" class="step-number" fill="white">3</text>
-                            <text x="470" y="250" text-anchor="start" class="step-label" fill="#333">Code</text>
-                            <text x="470" y="267" text-anchor="start" class="step-label" fill="#333">Program</text>
+                            <circle cx="425" cy="290" r="40" class="step-circle" fill="#FF9800"/>
+                            <text x="425" y="294" text-anchor="middle" class="step-number" fill="white">3</text>
+                            <text x="460" y="290" text-anchor="start" class="step-label" fill="#333">Code</text>
                         </g>
 
                         <!-- Step 4: Translate to Machine Code -->
                         <g class="lifecycle-step" data-step="4" role="button" tabindex="0" aria-label="Step 4: Translate to Machine Code" aria-expanded="false">
-                            <circle cx="406" cy="396" r="40" class="step-circle" fill="#9C27B0"/>
-                            <text x="406" y="400" text-anchor="middle" class="step-number" fill="white">4</text>
-                            <text x="444" y="451" text-anchor="start" class="step-label" fill="#333">Translate</text>
-                            <text x="444" y="468" text-anchor="start" class="step-label" fill="#333">Machine</text>
+                            <circle cx="329" cy="412" r="40" class="step-circle" fill="#9C27B0"/>
+                            <text x="329" y="416" text-anchor="middle" class="step-number" fill="white">4</text>
+                            <text x="364" y="412" text-anchor="start" class="step-label" fill="#333">Translate</text>
                         </g>
 
                         <!-- Step 5: Test the Program -->
                         <g class="lifecycle-step" data-step="5" role="button" tabindex="0" aria-label="Step 5: Test the Program" aria-expanded="false">
-                            <circle cx="250" cy="430" r="40" class="step-circle" fill="#E91E63"/>
-                            <text x="250" y="434" text-anchor="middle" class="step-number" fill="white">5</text>
-                            <text x="250" y="480" text-anchor="middle" class="step-label" fill="#333">Test</text>
+                            <circle cx="171" cy="412" r="40" class="step-circle" fill="#E91E63"/>
+                            <text x="171" y="416" text-anchor="middle" class="step-number" fill="white">5</text>
+                            <text x="136" y="412" text-anchor="end" class="step-label" fill="#333">Test</text>
                         </g>
 
                         <!-- Step 6: Release the Program -->
                         <g class="lifecycle-step" data-step="6" role="button" tabindex="0" aria-label="Step 6: Release the Program" aria-expanded="false">
-                            <circle cx="94" cy="396" r="40" class="step-circle" fill="#00BCD4"/>
-                            <text x="94" y="400" text-anchor="middle" class="step-number" fill="white">6</text>
-                            <text x="56" y="451" text-anchor="end" class="step-label" fill="#333">Release</text>
-                            <text x="56" y="468" text-anchor="end" class="step-label" fill="#333">Program</text>
+                            <circle cx="75" cy="290" r="40" class="step-circle" fill="#00BCD4"/>
+                            <text x="75" y="294" text-anchor="middle" class="step-number" fill="white">6</text>
+                            <text x="40" y="290" text-anchor="end" class="step-label" fill="#333">Release</text>
                         </g>
 
                         <!-- Step 7: Maintain & Improve -->
                         <g class="lifecycle-step" data-step="7" role="button" tabindex="0" aria-label="Step 7: Maintain and Improve" aria-expanded="false">
-                            <circle cx="94" cy="104" r="40" class="step-circle" fill="#FF5722"/>
-                            <text x="94" y="108" text-anchor="middle" class="step-number" fill="white">7</text>
-                            <text x="56" y="162" text-anchor="end" class="step-label" fill="#333">Maintain &amp;</text>
-                            <text x="56" y="179" text-anchor="end" class="step-label" fill="#333">Improve</text>
+                            <circle cx="109" cy="138" r="40" class="step-circle" fill="#FF5722"/>
+                            <text x="109" y="142" text-anchor="middle" class="step-number" fill="white">7</text>
+                            <text x="74" y="138" text-anchor="end" class="step-label" fill="#333">Maintain</text>
                         </g>
 
-                        <!-- Arrows showing the circular flow -->
-                        <defs>
-                            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                                <polygon points="0 0, 10 3, 0 6" fill="#999"/>
-                            </marker>
-                            <marker id="arrowhead-hover" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                                <polygon points="0 0, 10 3, 0 6" fill="#0066cc"/>
-                            </marker>
-                        </defs>
-                        
-                        <!-- Circular arrows -->
-                        <path d="M 250 110 A 148 148 0 0 1 398 130" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
-                        <path d="M 398 130 A 148 148 0 0 1 430 250" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
-                        <path d="M 430 250 A 148 148 0 0 1 398 370" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
-                        <path d="M 398 370 A 148 148 0 0 1 250 390" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
-                        <path d="M 250 390 A 148 148 0 0 1 102 370" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
-                        <path d="M 102 370 A 148 148 0 0 1 102 130" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
-                        <path d="M 102 130 A 148 148 0 0 1 250 110" fill="none" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)" class="flow-arrow"/>
+                        <!-- Flow arrows removed per request -->
                     </svg>
                     <p class="diagram-note">Click any step to learn more • All steps are interconnected and repeat</p>
                 </div>
@@ -183,6 +147,7 @@
                                 </ul>
                                 <p><em>A program that perfectly follows bad requirements is still a bad program.</em></p>
                                 <p>Professional developers spend significant time clarifying requirements because fixing misunderstandings later is expensive.</p>
+                                <p class="back-to-diagram"><a class="back-link" href="#cycle-diagram" aria-label="Back to the cycle diagram">▲ Back to diagram</a></p>
                             </div>
                         </div>
 
@@ -206,6 +171,7 @@
                                 </ul>
                                 <p><strong>If your logic is broken, no programming language can save you.</strong></p>
                                 <p>Strong developers think first, code second.</p>
+                                <p class="back-to-diagram"><a class="back-link" href="#cycle-diagram" aria-label="Back to the cycle diagram">▲ Back to diagram</a></p>
                             </div>
                         </div>
 
@@ -225,6 +191,7 @@
                                     <li><strong>Logic errors</strong> happen when the code runs but produces the wrong result</li>
                                 </ul>
                                 <p>Both are part of the job.</p>
+                                <p class="back-to-diagram"><a class="back-link" href="#cycle-diagram" aria-label="Back to the cycle diagram">▲ Back to diagram</a></p>
                             </div>
                         </div>
 
@@ -245,6 +212,7 @@
                                 </ul>
                                 <p><strong>If the translation fails, the program cannot run.</strong></p>
                                 <p>If it succeeds, the program can run — but that does not mean it is correct.</p>
+                                <p class="back-to-diagram"><a class="back-link" href="#cycle-diagram" aria-label="Back to the cycle diagram">▲ Back to diagram</a></p>
                             </div>
                         </div>
 
@@ -265,6 +233,7 @@
                                 </ul>
                                 <p><strong>Finding bugs here is a success, not a failure.</strong></p>
                                 <p>Professionals expect to test, fix, and retest repeatedly.</p>
+                                <p class="back-to-diagram"><a class="back-link" href="#cycle-diagram" aria-label="Back to the cycle diagram">▲ Back to diagram</a></p>
                             </div>
                         </div>
 
@@ -285,6 +254,7 @@
                                     <li>Real problems will appear</li>
                                 </ul>
                                 <p><strong>Production is where theory meets reality.</strong></p>
+                                <p class="back-to-diagram"><a class="back-link" href="#cycle-diagram" aria-label="Back to the cycle diagram">▲ Back to diagram</a></p>
                             </div>
                         </div>
 
@@ -306,6 +276,7 @@
                                 </ul>
                                 <p><strong>Most software spends far more time in maintenance than in initial development.</strong></p>
                                 <p>This is normal.</p>
+                                <p class="back-to-diagram"><a class="back-link" href="#cycle-diagram" aria-label="Back to the cycle diagram">▲ Back to diagram</a></p>
                             </div>
                         </div>
                     </div>
