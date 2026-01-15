@@ -325,6 +325,27 @@ a:focus-visible {
     scroll-margin-top: 80px; /* anchor back to diagram respects header */
 }
 
+.back-to-diagram-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 2px solid #0066cc;
+    color: #0066cc;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 999;
+    display: none;
+}
+
+.back-to-diagram-floating:hover,
+.back-to-diagram-floating:focus {
+    background-color: #f0f8ff;
+}
+
 .lifecycle-circle {
     width: 100%;
     max-width: 450px;

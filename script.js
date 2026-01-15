@@ -113,6 +113,29 @@ if (menuToggle) {
 // ===========================
 
 const cycleSteps = document.querySelectorAll('.cycle-step');
+const floatingBack = document.getElementById('back-to-diagram-floating');
+const diagramEl = document.getElementById('cycle-diagram');
+
+function collapseAllSteps() {
+    cycleSteps.forEach(step => {
+        const btn = step.querySelector('.step-button');
+        const cnt = step.querySelector('.step-content');
+        if (btn && cnt) {
+            btn.setAttribute('aria-expanded', 'false');
+            cnt.hidden = true;
+        }
+    });
+}
+
+function updateFloatingBackVisibility() {
+    const anyOpen = Array.from(cycleSteps).some(step => {
+        const cnt = step.querySelector('.step-content');
+        return cnt && !cnt.hidden;
+    });
+    if (floatingBack) {
+        floatingBack.style.display = anyOpen ? 'inline-block' : 'none';
+    }
+}
 
 cycleSteps.forEach(step => {
     const button = step.querySelector('.step-button');
@@ -142,7 +165,10 @@ cycleSteps.forEach(step => {
             if (!isExpanded) {
                 setTimeout(() => {
                     scrollToElement(step);
+                    updateFloatingBackVisibility();
                 }, 120);
+            } else {
+                updateFloatingBackVisibility();
             }
         });
 
@@ -155,6 +181,27 @@ cycleSteps.forEach(step => {
         });
     }
 });
+
+// Inline back links collapse and scroll
+const backLinks = document.querySelectorAll('.back-to-diagram .back-link');
+backLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        collapseAllSteps();
+        updateFloatingBackVisibility();
+        if (diagramEl) scrollToElement(diagramEl);
+    });
+});
+
+// Floating back button
+if (floatingBack) {
+    floatingBack.addEventListener('click', function (e) {
+        e.preventDefault();
+        collapseAllSteps();
+        updateFloatingBackVisibility();
+        if (diagramEl) scrollToElement(diagramEl);
+    });
+}
 
 // ===========================
 // ACCORDION: MISTAKE CARDS
